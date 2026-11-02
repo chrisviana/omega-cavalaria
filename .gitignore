@@ -1,0 +1,5 @@
+.env
+dist/
+firebase-config.js
+.vercel
+.DS_Store

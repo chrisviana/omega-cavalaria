@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Um documento por votante (id = uid anônimo): cada pessoa só cria/troca o próprio voto.
+    match /votos/{uid} {
+      allow read: if true;
+      allow create, update: if request.auth != null
+        && request.auth.uid == uid
+        && request.resource.data.keys().hasOnly(['opcao', 'atualizadoEm'])
+        && request.resource.data.opcao in [
+          'forca-que-impoe-respeito',
+          'ultimo-a-cair',
+          'espirito-de-cavalaria',
+          'honra-e-tradicao',
+          'imponente-e-marcante',
+          'curto-e-forte',
+          'gloria-eterna',
+          'omega-escreve-sua-historia'
+        ];
+      allow delete: if false;
+    }
+  }
+}

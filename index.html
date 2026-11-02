@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ômega · Cavalaria EB</title>
+  <meta name="description" content="Equipe Ômega da Cavalaria do Exército Brasileiro Habbo">
+  <link rel="icon" href="assets/omega.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Chakra+Petch:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio">
+      <img src="assets/cavalaria.gif" alt="" class="pixel">
+      <span>ÔMEGA</span>
+    </a>
+    <nav>
+      <a href="#comando">Comando</a>
+      <a href="#cavaleiros">Cavaleiros</a>
+      <a href="#votacao">Grito de Guerra</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-inner">
+        <img src="assets/omega.jpeg" alt="Brasão da equipe Ômega — Cavalaria" class="hero-logo">
+        <div class="hero-text">
+          <p class="eyebrow">
+            <img src="assets/emblema-eb.gif" alt="" class="pixel">
+            Exército Brasileiro · Cavalaria
+          </p>
+          <h1>Equipe <span>Ω</span> Ômega</h1>
+          <p class="lead">Forjados na disciplina, guiados pela lealdade, movidos pela coragem. Do primeiro ao último, ninguém fica para trás.</p>
+          <div class="hero-actions">
+            <a href="#votacao" class="btn btn-primary">Votar no grito de guerra</a>
+            <a href="#cavaleiros" class="btn btn-ghost">Conhecer a tropa</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comando" class="section">
+      <div class="section-head">
+        <h2>Comando</h2>
+        <p>Quem lidera a Ômega no front.</p>
+      </div>
+      <div class="command-grid" id="command-grid"></div>
+    </section>
+
+    <section id="cavaleiros" class="section section-alt">
+      <div class="section-head">
+        <h2>Cavaleiros</h2>
+        <p>Não somos muitos, somos os melhores.</p>
+      </div>
+      <div class="knights-grid" id="knights-grid"></div>
+    </section>
+
+    <section id="votacao" class="section">
+      <div class="section-head">
+        <h2>Grito de Guerra</h2>
+        <p>Escolha o grito oficial da Ômega. Um voto por pessoa — você pode trocar seu voto até o fim da votação.</p>
+      </div>
+      <div class="vote-status" id="vote-status" role="status">Conectando à votação…</div>
+      <div class="cries-grid" id="cries-grid"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img src="assets/emblema-eb.gif" alt="Emblema EB" class="pixel">
+    <p>Equipe Ômega · Cavalaria do EB</p>
+    <img src="assets/cavalaria.gif" alt="Emblema Cavalaria" class="pixel">
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
